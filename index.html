@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Vue app</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app" class="app">
+       <h1> {{title}}</h1>
+        <div class="card-container">
+            <cards-component 
+            class="card-container"
+            v-for="card in cards"
+            :title="card.title"
+            :link="card.link"
+            :text="card.text"
+        >
+
+        </cards-component>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
